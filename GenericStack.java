@@ -20,9 +20,11 @@ public class GenericStack<T> {
      * remove operation cost is O(1) since the last element of the array is removed
      * no elemental shifts will occur.. if the first element removed, then O(n) since all values shift left
      */
-    public void pop(){
+    public T pop(){
         top--;
+        T data = stackArr.get(top);
         stackArr.remove(top);
+        return data;
     }
 
     /**
@@ -32,7 +34,13 @@ public class GenericStack<T> {
        return stackArr.get(top-1);
     }
 
+    public Boolean isEmpty(){
+        return top == 0;
+    }
+
     public String print(){
         return stackArr.toString();
     }
+
+
 }
