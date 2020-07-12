@@ -2,7 +2,7 @@ import java.util.EmptyStackException;
 
 public class DoublyLinkedStack<T>{
 
-    //Node object which will be pushed into the stack
+    //Node object which will be pushed onto the stack
     private class Node<T>{
         private T data;
         private Node<T> next;
